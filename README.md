@@ -15,7 +15,7 @@ mapping the following would do:
 
     from django_ini_settings.load import load_ini
 
-    load_ini_settings(ini_file="/etc/application/application.ini",
+    load_ini(ini_file="/etc/application/application.ini",
                       settings_module=sys.modules[__name__])
 
 This implies that your ini file is located in /etc/application/application.ini
@@ -71,7 +71,7 @@ following in your settings
         ("application", ANY): StringSetting(NAME_TO_UPPER),
     }
 
-    load_ini_settings(ini_file="/etc/application/application.ini",
+    load_ini(ini_file="/etc/application/application.ini",
                       settings_module=sys.modules[__name__],
                       config_mapping=CONFIG_FILE_MAPPING)
 
@@ -79,7 +79,7 @@ following in your settings
 
 Instead of doing:
 
-    load_ini_settings(ini_file="/etc/application/application.ini",
+    load_ini(ini_file="/etc/application/application.ini",
                       settings_module=sys.modules[__name__])
 
 You can also set an environment variable "DJANGO_CONFIG_FILE" containing the location of
@@ -89,7 +89,7 @@ the INI file. e.g.
 
 Then change the line to:
 
-    load_ini_settings(settings_module=sys.modules[__name__])
+    load_ini(settings_module=sys.modules[__name__])
 
 ## Tests
 

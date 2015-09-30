@@ -46,7 +46,7 @@ def load_ini(ini_file=None, settings_module=None, config_mapping=None):
     To use, put something like the following in your settings module:
     from django_ini_settings.load import load_ini
 
-    load_ini_settings(ini_file="/etc/application/application.ini",
+    load_ini(ini_file="/etc/application/application.ini",
                       settings_module=sys.modules[__name__])
 
     If you want to customise the mappings from the ini to your settings then,
@@ -71,7 +71,7 @@ def load_ini(ini_file=None, settings_module=None, config_mapping=None):
         ("application", ANY): StringSetting(NAME_TO_UPPER),
     }
 
-    load_ini_settings(ini_file="/etc/application/application.ini",
+    load_ini(ini_file="/etc/application/application.ini",
                       settings_module=sys.modules[__name__],
                       config_mapping=CONFIG_FILE_MAPPING)
 
