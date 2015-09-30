@@ -13,6 +13,7 @@ Install this library
 Add the hook into your settings.py, if you want to use the default config
 mapping the following would do:
 
+    import sys
     from django_ini_settings.load import load_ini
 
     load_ini(ini_file="/etc/application/application.ini",
@@ -50,7 +51,7 @@ This would be transformed to the following in your settings.py
 You can also provide your own mapping, including wildcards. e.g. add the
 following in your settings
 
-
+    import sys
     from django_ini_settings.load import load_ini
     from django_ini_settings.settings_types import (DictItemSetting, StringSetting,
                                                BoolSetting, IntSetting)

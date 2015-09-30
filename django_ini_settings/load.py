@@ -44,6 +44,7 @@ def load_ini(ini_file=None, settings_module=None, config_mapping=None):
     Load an ini file into your django settings.py
 
     To use, put something like the following in your settings module:
+    import sys
     from django_ini_settings.load import load_ini
 
     load_ini(ini_file="/etc/application/application.ini",
@@ -51,6 +52,7 @@ def load_ini(ini_file=None, settings_module=None, config_mapping=None):
 
     If you want to customise the mappings from the ini to your settings then,
     you can do something like this:
+    import sys
     from django_ini_settings.load import load_ini
     from django_ini_settings.settings_types import (DictItemSetting, StringSetting,
                                                BoolSetting, IntSetting)
