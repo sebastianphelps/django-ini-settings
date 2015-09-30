@@ -1,0 +1,1 @@
+recursive-include django_local_settings *.py METADATA
