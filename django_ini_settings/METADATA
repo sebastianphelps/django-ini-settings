@@ -1,6 +1,6 @@
 [meta]
 version = 0.0.1
 description = A configurable way of moving some settings out of the django settings.py and into a deployable .ini file
-name = django_local_settings
-long_name = django_local_settings
-keywords = django_local_settings django local settings
+name = django_ini_settings
+long_name = django_ini_settings
+keywords = django_ini_settings django local settings ini

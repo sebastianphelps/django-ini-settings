@@ -1,10 +1,10 @@
 import unittest
 import os
 
-from django_local_settings.settings_types import (DictItemSetting, StringSetting,
+from django_ini_settings.settings_types import (DictItemSetting, StringSetting,
                                            BoolSetting, IntSetting)
-from django_local_settings.load import match_setting, load_ini
-from django_local_settings.statics import ANY, NAME_TO_UPPER
+from django_ini_settings.load import match_setting, load_ini
+from django_ini_settings.statics import ANY, NAME_TO_UPPER
 
 
 class MatchSettingTestCase(unittest.TestCase):

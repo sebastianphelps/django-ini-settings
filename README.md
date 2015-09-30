@@ -1,4 +1,4 @@
-# django-local-settings
+# django-ini-settings
 
 
 This library aims to be a non-intrusive configurable way of moving some local
@@ -8,12 +8,12 @@ settings out of the django settings.py and into a deployable .ini file
 
 Install this library
 
-    pip install django-local-settings
+    pip install django_ini_settings
 
 Add the hook into your settings.py, if you want to use the default config
 mapping the following would do:
 
-    from django_local_settings.load import load_ini
+    from django_ini_settings.load import load_ini
 
     load_ini_settings(ini_file="/etc/application/application.ini",
                       settings_module=sys.modules[__name__])
@@ -51,10 +51,10 @@ You can also provide your own mapping, including wildcards. e.g. add the
 following in your settings
 
 
-    from django_local_settings.load import load_ini
-    from django_local_settings.settings_types import (DictItemSetting, StringSetting,
+    from django_ini_settings.load import load_ini
+    from django_ini_settings.settings_types import (DictItemSetting, StringSetting,
                                                BoolSetting, IntSetting)
-    from django_local_settings.statics import ANY, NAME_TO_UPPER
+    from django_ini_settings.statics import ANY, NAME_TO_UPPER
 
     CONFIG_FILE_MAPPING = {
         ("database", "user"): DictItemSetting(("DATABASES", "default", "USER")),

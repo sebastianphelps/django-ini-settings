@@ -44,17 +44,17 @@ def load_ini(ini_file=None, settings_module=None, config_mapping=None):
     Load an ini file into your django settings.py
 
     To use, put something like the following in your settings module:
-    from django_local_settings.load import load_ini
+    from django_ini_settings.load import load_ini
 
     load_ini_settings(ini_file="/etc/application/application.ini",
                       settings_module=sys.modules[__name__])
 
     If you want to customise the mappings from the ini to your settings then,
     you can do something like this:
-    from django_local_settings.load import load_ini
-    from django_local_settings.settings_types import (DictItemSetting, StringSetting,
+    from django_ini_settings.load import load_ini
+    from django_ini_settings.settings_types import (DictItemSetting, StringSetting,
                                                BoolSetting, IntSetting)
-    from django_local_settings.statics import ANY, NAME_TO_UPPER
+    from django_ini_settings.statics import ANY, NAME_TO_UPPER
 
     CONFIG_FILE_MAPPING = {
         ("database", "user"): DictItemSetting(("DATABASES", "default", "USER")),

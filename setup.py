@@ -14,7 +14,7 @@ def load_metadata(ini_file):
     return meta
 
 METADATA_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                             'django_local_settings/METADATA')
+                             'django_ini_settings/METADATA')
 META = load_metadata(METADATA_PATH)
 
 
@@ -30,8 +30,9 @@ setup(
     author="Sebastian Phelps",
     author_email="sebastian.phelps@gmail.com",
     description=META["description"],
-    packages=['django_local_settings'],
+    packages=['django_ini_settings'],
+    keywords=META["keywords"],
     include_package_data=True,
-    package_data={'django_local_settings': ['METADATA', ]},
+    package_data={'django_ini_settings': ['METADATA', ]},
     long_description=read('README.md'),
 )

@@ -1,9 +1,9 @@
 import unittest
 import os
 
-from django_local_settings.settings_types import (Setting, DictItemSetting,
+from django_ini_settings.settings_types import (Setting, DictItemSetting,
                                                   BoolSetting, IntSetting)
-from django_local_settings.statics import ANY, NAME_TO_UPPER, NAME_AS_IS
+from django_ini_settings.statics import ANY, NAME_TO_UPPER, NAME_AS_IS
 
 
 class SettingTestCase(unittest.TestCase):
